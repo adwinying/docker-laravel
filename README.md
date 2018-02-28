@@ -49,6 +49,13 @@ db:
     - [your_local_machine_port_here]:3306
 ```
 
+### Changing the directory of `DocumentRoot`
+In `web.dockerfile` change `ENV APACHE_DOCUMENT_ROOT /var/www/public` to the line below:
+
+```dockerfile
+ENV APACHE_DOCUMENT_ROOT /path/to/new/DocumentRoot
+```
+
 Other configurations in `docker-compose.yml` are pretty self-explanatory I think...
 
 ## Coming Soon
