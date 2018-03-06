@@ -24,3 +24,6 @@ RUN composer global require "laravel/installer"
 # Add .composer/vendor/bin to bash_profile
 RUN echo export PATH='$HOME/.composer/vendor/bin:$PATH' >> ~/.bashrc && \
 	echo cd .. >> ~/.bashrc
+
+# Allow Laravel to rewrite routes
+RUN a2enmod rewrite
