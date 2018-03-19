@@ -7,7 +7,7 @@ RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-av
 
 # Install dependencies for nodejs & laravel
 RUN apt-get update && apt-get install -y gnupg zlib1g-dev
-RUN docker-php-ext-install zip
+RUN docker-php-ext-install pdo_mysql zip
 
 # Install nodejs
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash && \
